@@ -96,4 +96,4 @@ plt.xlabel("curve parameter")
 plt.plot(kappa)
 plt.savefig("curvature.png")
 
-print(f"Max instantaneous turning radius is {1/np.max(kappa)} m")
+print(f"Min instantaneous turning radius is {1/np.max(kappa)} m")
