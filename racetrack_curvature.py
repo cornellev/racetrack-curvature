@@ -82,5 +82,18 @@ dy, ddy = y_spline.derivative(1), y_spline.derivative(2)
 kappa = np.abs(ddx(t) * dy(t) + dx(t) * ddy(t)) / np.power(dx(t)**2 + dy(t)**2, 1.5)
 
 plt.scatter(x_spline(t), y_spline(t), s=1, c=kappa)
+plt.colorbar()
+plt.title("Curvature along track")
+plt.xlabel("x position (m)")
+plt.ylabel("y position (m)")
 plt.gca().set_aspect('equal')
 plt.savefig("result.png")
+
+plt.gcf().clear()
+plt.title("Curvature along curve")
+plt.ylabel("curvature (1/m)")
+plt.xlabel("curve parameter")
+plt.plot(kappa)
+plt.savefig("curvature.png")
+
+print(f"Max instantaneous turning radius is {1/np.max(kappa)} m")
