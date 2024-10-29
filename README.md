@@ -1,4 +1,4 @@
-# Racetrack Coords
+# Racetrack Curvature
 
 _Jason Klein. Oct. 29, 2024_
 
