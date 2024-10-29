@@ -1,0 +1,5 @@
+name: racetrack-coords
+dependencies:
+  - numpy
+  - scipy
+  - matplotlib
